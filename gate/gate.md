@@ -3,8 +3,9 @@ O gate faz parte do nível 1 da topologia mesh e é o responsável por oferecer 
 
 ## Equipamentos
 Nosso router apesar de oferecer duas antenas e permitir SSID múltiplo, oferece apenas **uma interface física**. Um empecilho para nosso objetivo. Porém o router dispõe de uma porta USB. Para poder então utilizar o Gate da forma devida utilizamos uma antena USB que servirá como nossa segunda interface. Para tal, devemos configurá-la.
-* TL-WR842ND da TP-Link + OpenWrt Chaos Calmer 15.05
-* INSERIR DETALHES DA ANTENA USB!
+* TL-WR842ND da TP-Link
+* TL-WN721N da TP-Link
+* OpenWrt Chaos Calmer 15.05
 
 ### Configuração
 Estando em uma sessão SSH com nosso router, devemos primeiro atualizar a lista de dependências do sistema. Como **root** execute:
@@ -14,6 +15,10 @@ opkg install usbutils
 ```
 Feito isso, execute `lsusb` para listar os dispositivos conectados. Nossa saída foi:
 ```
-Bus 001 Device 009: ID 148f:2573 Ralink Technology, Corp. RT2501/RT2573 Wireless Adapter
+Bus 001 Device 002: ID 0cf3:9271 Atheros Communications, Inc. AR9271 802.11n
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+```
+Em seguida vamos instalar o drive da antena USB. Para isso:
+```
+opkg install kmod-ath9k-htc
 ```
