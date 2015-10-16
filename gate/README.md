@@ -26,8 +26,8 @@ Com o OpenWrt Instalado, o endereço IP do roteador também será alterado. Aces
 #### Antena USB
 Partindo do ponto que estamos em uma sessão SSH ativa. Devemos atualizar a lista de dependências do sistema e instalar um utilitário para reconhecer os dispositivos conectados ao router. Como **root** execute:
 ```bash
-\# opkg update
-\# opkg install usbutils
+opkg update
+opkg install usbutils
 ```
 Feito isso, execute `lsusb` para listar os dispositivos conectados. Nossa saída foi:
 ```
@@ -36,7 +36,7 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
 Em seguida vamos instalar o drive da antena USB. Para isso:
 ```bash
-\# opkg install kmod-ath9k-htc
+opkg install kmod-ath9k-htc
 ```
 É possível checar o log do buffer através do comando `dmesg` e confirmar se a instalação ocorreu com sucesso.
 
