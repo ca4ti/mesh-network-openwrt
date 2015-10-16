@@ -5,6 +5,7 @@ Uma rede de infraestrutura é composta de Access Point e clientes, os quais nece
 
 ## Topologia
 ![Topologia Mesh](mesh.png)
+
 Na essência, existem quatro tipos de agentes numa rede mesh. São eles:
 * `Portal` são os routers que se comunicam com a internet diretamente.
 * `Station` fazem a malha, estando ao centro da nuvem de routers. Comunicam-se com os Portal e Gate.
@@ -17,4 +18,4 @@ Routers com 3 ou mais antenas podem realizar funções de Station e Gate ao mesm
 Este repositório está organizado em pastas. Seguindo as configurações originais da topologia.
 
 ### Equipamento
-Para testes estamos utilizando o TL-WR842ND da TP-Link com o OpenWrt instalado.
+Para testes estamos utilizando o TL-WR842ND da TP-Link com o OpenWrt instalado e algumas antenas USB WN721N.
