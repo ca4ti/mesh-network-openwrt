@@ -1,5 +1,6 @@
 # Gate
 ![Gate](gate.png)
+
 O gate está na extremidade de uma rede mesh mais próxima dos clientes desta rede, é o responsável por oferecer um AP aos STAs. Para isso ele deve possuir, no mínimo, duas interfaces de rede. Podendo fazer uma comunicação direta com o Portal ou através de uma ou mais Mesh Stations.
 
 ## Equipamento
