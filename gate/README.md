@@ -42,3 +42,10 @@ opkg install kmod-ath9k-htc
 
 #### Configurações Adicionais
 Se você chegou até aqui, pode substituir os arquivos **network** e **wireless** localizados em `/etc/config/` pelos respectivos arquivos neste repositório.
+
+
+#### Navegação
+1. [Página Inicial](https://github.com/ivomarsan/mesh-network-openwrt)
+2. [Gate](https://github.com/ivomarsan/mesh-network-openwrt/tree/master/gate)
+3. [Station](https://github.com/ivomarsan/mesh-network-openwrt/tree/master/station)
+4. [Portal](https://github.com/ivomarsan/mesh-network-openwrt/tree/master/portal)

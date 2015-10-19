@@ -42,3 +42,10 @@ Para a execução dos testes utilizamos seguintes equipamentos:
   * TL-WN721N da TP-Link (Antena USB)
 * Software:
   * OpenWrt Chaos Calmer 15.05
+
+
+#### Navegação
+1. [Página Inicial](https://github.com/ivomarsan/mesh-network-openwrt)
+2. [Gate](https://github.com/ivomarsan/mesh-network-openwrt/tree/master/gate)
+3. [Station](https://github.com/ivomarsan/mesh-network-openwrt/tree/master/station)
+4. [Portal](https://github.com/ivomarsan/mesh-network-openwrt/tree/master/portal)
