@@ -15,7 +15,30 @@ Na essência, existem quatro tipos de agentes numa rede mesh. São eles:
 Routers com 3 ou mais antenas podem realizar funções de Station e Gate ao mesmo tempo. A grande vantagem é cobrir uma área maior com APs.
 
 ## Repositório
-Este repositório está organizado em pastas. Seguindo as configurações originais da topologia.
+Este repositório está organizado com base na topologia das *mesh networks*. Ele é mantido pelo grupo de Redes Mesh do LAR-A, Laboratório de Redes de Aracati.
+
+### Cenário
+Tendo em vista nosso número limitado de equipamentos, montaremos um cenário composto de Portal, Station e Gate. Sendo uma unidade para cada tipo de agente. Assim como ilustra a figura:
+![Cenário](cenario.png)
+
+Configuraremos tal cenário com as especificações abaixo listadas:
+* **Portal**
+  * DHCP: On
+  * Canal: 1
+  * IP: 192.168.20.1
+* **Station**
+  * DHCP: Off
+  * Canal: 1 e 6
+  * IP: 192.168.30.1
+* **Gate**
+  * DHCP: Off
+  * Canal: 6 e 11
+  * IP: 192.168.40.1
 
 ### Equipamento
-Para testes estamos utilizando o TL-WR842ND da TP-Link com o OpenWrt instalado e algumas antenas USB WN721N.
+Para a execução dos testes utilizamos seguintes equipamentos:
+* Harware:
+  * TL-WR842ND da TP-Link (Roteador)
+  * TL-WN721N da TP-Link (Antena USB)
+* Software:
+  * OpenWrt Chaos Calmer 15.05

@@ -1,14 +1,13 @@
-# Gate
-![Gate](gate.png)
+# Portal
+![Portal](portal.png)
 
-O gate está na extremidade de uma rede mesh mais próxima dos clientes desta rede, é o responsável por oferecer um AP aos STAs. Para isso ele deve possuir, no mínimo, duas interfaces de rede. Podendo fazer uma comunicação direta com o Portal ou através de uma ou mais Mesh Stations.
+Em *mesh networks*, um portal é o router responsável pela conexão com o backbone. Ligando a rede à Internet. Geralmente é o único nó que possui conexão com fio. Portanto, diferentemente dos outros tipos de agentes numa topologia mesh, é necessário, no mínimo, apenas uma interface física wireless para funcionar, visto que a comunicação externa pode ser feita através de um RJ-45 e a interna, via 802.11s com outro nó agente.
 
 ## Equipamento
-Nosso router apesar de oferecer duas antenas e permitir SSID múltiplo, oferece apenas **uma interface física**. Um empecilho para nosso objetivo. Já que para evitar o *intrafluxo*, utilizamos canais diferentes para comunicação nos rádios. Porém o router dispõe de uma porta USB. Para poder então solucionar nossa problemática e utilizar o Gate de forma devida, adicionamos uma antena USB que servirá como nossa segunda interface.
+Continuamos utilizando o mesmo roteador, porém, descartamos o uso de uma antena USB auxiliar, devido a limitação da quantidade de equipamento disponível para testes. O que não atrapalhará o cenário explorado.
 
-Para a realização da proposta dispomos dos seguintes equipamentos:
+Para a realização da proposta dispomos do seguinte equipamento:
 * TL-WR842ND da TP-Link (Roteador)
-* TL-WN721N da TP-Link (Antena USB)
 
 ### Configuração
 #### OpenWrt
@@ -22,23 +21,6 @@ $ wget http://downloads.openwrt.org/chaos_calmer/15.05/ar71xx/generic/openwrt-15
 Para instalá-lo, acesse o painel de controle atual do seu roteador, possivelmente em [192.168.0.1](http://192.168.0.1/). Realize o login com suas credenciais já definidas previamente ou caso contrário, utilize `admin` para o usuário e senha que é o padrão por convenção. Posteriormente procure por Software Updates e realize upload da imagem do OpenWrt.
 
 Com o OpenWrt Instalado, o endereço IP do roteador também será alterado. Acesse [192.168.1.1](http://192.168.1.1/) e crie uma senha para o root, ela será necessária para poder utilizar o SSH.
-
-#### Antena USB
-Partindo do ponto que estamos em uma sessão SSH ativa. Devemos atualizar a lista de dependências do sistema e instalar um utilitário para reconhecer os dispositivos conectados ao router. Como **root** execute:
-```bash
-opkg update
-opkg install usbutils
-```
-Feito isso, execute `lsusb` para listar os dispositivos conectados. Nossa saída foi:
-```
-Bus 001 Device 002: ID 0cf3:9271 Atheros Communications, Inc. AR9271 802.11n
-Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-```
-Em seguida vamos instalar o drive da antena USB. Para isso:
-```bash
-opkg install kmod-ath9k-htc
-```
-É possível checar o log do buffer através do comando `dmesg` e confirmar se a instalação ocorreu com sucesso.
 
 #### Configurações Adicionais
 Se você chegou até aqui, pode substituir os arquivos **network** e **wireless** localizados em `/etc/config/` pelos respectivos arquivos neste repositório.
