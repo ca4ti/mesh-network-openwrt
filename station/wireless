@@ -1,0 +1,33 @@
+config wifi-device 'radio0'
+        option channel '1'
+        option txpower '18'
+        option country 'US'
+        option hwmode '11g'
+        option htmode 'HT20'
+        option type 'mac80211'
+        option path 'platform/ar934x_wmac'
+
+config wifi-iface
+        option mode 'mesh'
+        option network 'wan'
+        option device 'radio0'
+        option encryption 'none'
+        option mesh_id 'meshlara'
+        option ssid 'OpenWrt_Mesh_Station1'
+
+config wifi-device 'radio1'
+        option channel '6'
+        option txpower '18'
+        option country 'US'
+        option hwmode '11g'
+        option htmode 'HT20'
+        option type 'mac80211'
+        option path 'platform/ehci-platform/usb1/1-1/1-1:1.0'
+
+config wifi-iface
+        option mode 'mesh'
+        option network 'lan'
+        option device 'radio1'
+        option encryption 'none'
+        option mesh_id 'meshlara2'
+        option ssid 'OpenWrt_Mesh_Station6'
