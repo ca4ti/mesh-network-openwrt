@@ -1,4 +1,4 @@
-# Mesh Network
+# Mesh Networks
 Rede mesh ou rede de malha, é uma alternativa de protocolo ao padrão 802.11 para diretrizes de tráfego de dados e voz além das redes a cabo ou infraestrutura wireless.
 
 Uma rede de infraestrutura é composta de Access Point e clientes, os quais necessariamente devem utilizar aquele AP para trafegarem em uma rede. Uma rede mesh é composta de vários nós/roteadores, que passam a se comportar como uma única e grande rede, possibilitando que o cliente se conecte em qualquer um destes nós. Os nós têm a função de repetidores e cada nó está conectado a um ou mais dos outros nós. Desta maneira é possível transmitir mensagens de um nó a outro por diferentes caminhos.
